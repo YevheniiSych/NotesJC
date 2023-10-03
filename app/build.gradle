@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.notesjc'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.notesjc"
         minSdk 31
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -37,7 +37,7 @@ android {
         compose true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion '1.2.0'
+        kotlinCompilerExtensionVersion '1.4.0'
     }
     packagingOptions {
         resources {
@@ -60,4 +60,5 @@ dependencies {
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_ui_version"
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
+    implementation "androidx.navigation:navigation-compose:2.7.3"
 }
