@@ -21,7 +21,8 @@ fun NotesScreen(navController: NavController) {
             .padding(top = 20.dp, start = 10.dp, end = 10.dp)
     ) {
         NotesLazyList(
-            items = createItems()
+            items = createItems(),
+            navController = navController
         )
     }
 }
@@ -34,12 +35,15 @@ fun createItems(): List<Note> {
 }
 
 @Composable
-fun NotesLazyList(items: List<Note>) {
+fun NotesLazyList(items: List<Note>, navController: NavController) {
     LazyColumn(
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         items(items) { note ->
-            NoteView(note = note)
+            NoteView(
+                note = note,
+                navController = navController
+            )
         }
     }
 }

@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.notesjc.ui.note.edit.NoteEditScreen
 import com.notesjc.ui.note.list.NotesScreen
 import com.notesjc.ui.theme.NotesJCTheme
 import com.notesjc.ui.util.Screen
@@ -31,6 +32,9 @@ class MainActivity : ComponentActivity() {
                     ) {
                         composable(route = Screen.NotesScreen.route) {
                             NotesScreen(navController = navController)
+                        }
+                        composable(route = Screen.NoteEditScreen.route) {
+                            NoteEditScreen(navController = navController)
                         }
                     }
                 }

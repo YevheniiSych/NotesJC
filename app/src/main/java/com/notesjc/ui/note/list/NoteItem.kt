@@ -11,11 +11,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.notesjc.model.Note
 import com.notesjc.ui.theme.Teal200
+import com.notesjc.ui.util.Screen
 
 @Composable
-fun NoteView(note: Note) {
+fun NoteView(note: Note, navController: NavController) {
     Column(
         modifier = Modifier
             .clip(RoundedCornerShape(10.dp))
@@ -24,7 +26,7 @@ fun NoteView(note: Note) {
             .background(Teal200)
             .padding(horizontal = 20.dp, vertical = 10.dp)
             .clickable {
-
+                navController.navigate(Screen.NoteEditScreen.route)
             }
     ) {
         Text(

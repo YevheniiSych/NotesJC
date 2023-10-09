@@ -22,8 +22,8 @@ fun NoteEditScreen(navController: NavController) {
             .background(color = Purple200)
             .padding(top = 20.dp, start = 10.dp, end = 10.dp)
     ) {
-        NotesLazyList(
-            items = createItems()
-        )
+//        NotesLazyList(
+//            items = createItems()
+//        )
     }
 }
