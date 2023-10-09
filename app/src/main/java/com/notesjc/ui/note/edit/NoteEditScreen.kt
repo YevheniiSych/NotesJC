@@ -1,16 +1,11 @@
 package com.notesjc.ui.note.edit
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.TextField
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.notesjc.ui.note.list.NotesLazyList
-import com.notesjc.ui.note.list.createItems
 import com.notesjc.ui.theme.Purple200
 
 @Composable
@@ -20,10 +15,13 @@ fun NoteEditScreen(navController: NavController) {
             .fillMaxWidth()
             .fillMaxHeight()
             .background(color = Purple200)
-            .padding(top = 20.dp, start = 10.dp, end = 10.dp)
     ) {
-//        NotesLazyList(
-//            items = createItems()
-//        )
+        var text by remember { mutableStateOf("Write your notes") }
+
+        TextField(
+            modifier = Modifier.fillMaxSize(),
+            value = text,
+            onValueChange = { text = it },
+        )
     }
 }
