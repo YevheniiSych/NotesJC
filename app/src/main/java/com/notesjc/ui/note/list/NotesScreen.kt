@@ -46,16 +46,16 @@ fun NotesScreen(navController: NavController) {
 
 fun createItems(): List<Note> {
     return listOf(
-        Note("1", "Hello World", "Creative dev"),
-        Note("2", "Hello World", "Creative dev"),
-        Note("1", "Hello World", "Creative dev"),
-        Note("2", "Hello World", "Creative dev"),
-        Note("1", "Hello World", "Creative dev"),
-        Note("2", "Hello World", "Creative dev"),
-        Note("1", "Hello World", "Creative dev"),
-        Note("2", "Hello World", "Creative dev"),
-        Note("1", "Hello World", "Creative dev"),
-        Note("2", "Hello World", "Creative dev"),
+//        Note("1", "Hello World", "Creative dev"),
+//        Note("2", "Hello World", "Creative dev"),
+//        Note("1", "Hello World", "Creative dev"),
+//        Note("2", "Hello World", "Creative dev"),
+//        Note("1", "Hello World", "Creative dev"),
+//        Note("2", "Hello World", "Creative dev"),
+//        Note("1", "Hello World", "Creative dev"),
+//        Note("2", "Hello World", "Creative dev"),
+//        Note("1", "Hello World", "Creative dev"),
+//        Note("2", "Hello World", "Creative dev"),
     )
 }
 
