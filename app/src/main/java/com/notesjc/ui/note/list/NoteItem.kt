@@ -12,7 +12,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.notesjc.model.Note
+import com.notesjc.data.note.model.Note
 import com.notesjc.ui.theme.Teal200
 import com.notesjc.ui.util.Screen
 

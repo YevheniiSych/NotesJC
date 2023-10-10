@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.notesjc.model.Note
+import com.notesjc.data.note.model.Note
 import com.notesjc.ui.theme.Purple200
 import com.notesjc.ui.util.Screen
 

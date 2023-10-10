@@ -1,4 +1,4 @@
-package com.notesjc.model
+package com.notesjc.data.note.model
 
 data class Note(
     val id: String,
