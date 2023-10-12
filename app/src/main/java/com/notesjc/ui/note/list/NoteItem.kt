@@ -35,7 +35,7 @@ fun NoteView(note: Note, navController: NavController) {
         )
         Spacer(modifier = Modifier.height(5.dp))
         Text(
-            text = note.description,
+            text = note.content,
             fontSize = 14.sp
         )
     }

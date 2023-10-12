@@ -8,6 +8,8 @@ data class Note(
     @PrimaryKey
     val id: Int? = null,
     val title: String,
-    val description: String,
+    val content: String,
     val timestamp: Long,
 )
+
+class InvalidNoteException(message: String): Exception(message)
