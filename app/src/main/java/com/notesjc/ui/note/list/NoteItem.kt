@@ -15,6 +15,7 @@ import androidx.navigation.NavController
 import com.notesjc.data.note.model.Note
 import com.notesjc.ui.theme.Teal200
 import com.notesjc.ui.util.Screen
+import kotlin.math.truncate
 
 @Composable
 fun NoteView(note: Note, navController: NavController) {
@@ -31,7 +32,8 @@ fun NoteView(note: Note, navController: NavController) {
     ) {
         Text(
             text = note.title,
-            style = MaterialTheme.typography.h6
+            style = MaterialTheme.typography.h6,
+            maxLines = 1,
         )
         Spacer(modifier = Modifier.height(5.dp))
         Text(

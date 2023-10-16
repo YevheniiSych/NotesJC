@@ -26,11 +26,13 @@ fun NotesScreen(navController: NavController, viewModel: NotesViewModel = hiltVi
             .fillMaxWidth()
             .fillMaxHeight()
             .background(color = Purple200)
-            .padding(top = 20.dp, start = 10.dp, end = 10.dp)
+            .padding(start = 10.dp, end = 10.dp)
     ) {
         NotesLazyList(
+            modifier = Modifier
+                .padding(top = 20.dp, bottom = 20.dp),
             items = viewModel.state.value.notes,
-            navController = navController
+            navController = navController,
         )
 
         FloatingActionButton(
@@ -40,14 +42,15 @@ fun NotesScreen(navController: NavController, viewModel: NotesViewModel = hiltVi
             onClick = { navController.navigate(Screen.NoteEditScreen.route) },
             backgroundColor = Color.Red,
         ) {
-            Icon(Icons.Filled.Add, "Add note button button")
+            Icon(Icons.Filled.Add, "Add note button")
         }
     }
 }
 
 @Composable
-fun NotesLazyList(items: List<Note>, navController: NavController) {
+fun NotesLazyList(modifier: Modifier, items: List<Note>, navController: NavController) {
     LazyColumn(
+        modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         items(items) { note ->
