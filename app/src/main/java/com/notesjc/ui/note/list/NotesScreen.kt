@@ -13,13 +13,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.notesjc.data.note.model.Note
 import com.notesjc.ui.theme.Purple200
 import com.notesjc.ui.util.Screen
 
 @Composable
-fun NotesScreen(navController: NavController) {
+fun NotesScreen(navController: NavController, viewModel: NotesViewModel = hiltViewModel()) {
     Box(
         Modifier
             .fillMaxWidth()
@@ -28,7 +29,7 @@ fun NotesScreen(navController: NavController) {
             .padding(top = 20.dp, start = 10.dp, end = 10.dp)
     ) {
         NotesLazyList(
-            items = createItems(),
+            items = viewModel.state.value.notes,
             navController = navController
         )
 
@@ -42,21 +43,6 @@ fun NotesScreen(navController: NavController) {
             Icon(Icons.Filled.Add, "Add note button button")
         }
     }
-}
-
-fun createItems(): List<Note> {
-    return listOf(
-//        Note("1", "Hello World", "Creative dev"),
-//        Note("2", "Hello World", "Creative dev"),
-//        Note("1", "Hello World", "Creative dev"),
-//        Note("2", "Hello World", "Creative dev"),
-//        Note("1", "Hello World", "Creative dev"),
-//        Note("2", "Hello World", "Creative dev"),
-//        Note("1", "Hello World", "Creative dev"),
-//        Note("2", "Hello World", "Creative dev"),
-//        Note("1", "Hello World", "Creative dev"),
-//        Note("2", "Hello World", "Creative dev"),
-    )
 }
 
 @Composable
