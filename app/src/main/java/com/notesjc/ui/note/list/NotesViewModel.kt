@@ -1,4 +1,4 @@
-package com.notesjc.ui.note
+package com.notesjc.ui.note.list
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -8,6 +8,8 @@ import com.notesjc.data.note.model.Note
 import com.notesjc.data.note.use_case.NotesUseCases
 import com.notesjc.data.note.util.NoteOrder
 import com.notesjc.data.note.util.OrderType
+import com.notesjc.ui.note.NoteEvent
+import com.notesjc.ui.note.NoteState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn
@@ -16,7 +18,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class NoteViewModel @Inject constructor(
+class NotesViewModel @Inject constructor(
     private val notesUseCases: NotesUseCases
 ) : ViewModel() {
 
