@@ -18,7 +18,7 @@ import com.notesjc.ui.util.Screen
 import kotlin.math.truncate
 
 @Composable
-fun NoteView(note: Note, navController: NavController) {
+fun NoteView(note: Note, onClick: (noteId: Int?) -> Unit) {
     Column(
         modifier = Modifier
             .clip(RoundedCornerShape(10.dp))
@@ -27,7 +27,7 @@ fun NoteView(note: Note, navController: NavController) {
             .background(Teal200)
             .padding(horizontal = 20.dp, vertical = 10.dp)
             .clickable {
-                navController.navigate(Screen.NoteEditScreen.route)
+                onClick(note.id)
             }
     ) {
         Text(

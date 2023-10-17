@@ -56,7 +56,9 @@ fun NotesLazyList(modifier: Modifier, items: List<Note>, navController: NavContr
         items(items) { note ->
             NoteView(
                 note = note,
-                navController = navController
+                onClick = {
+                    navController.navigate(Screen.NoteEditScreen.route + "?noteId=${note.id}")
+                }
             )
         }
     }
