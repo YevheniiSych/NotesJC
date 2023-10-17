@@ -1,4 +1,4 @@
-package com.notesjc.ui.note.list
+package com.notesjc.ui.note.list.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
