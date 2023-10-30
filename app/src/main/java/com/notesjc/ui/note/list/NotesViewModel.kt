@@ -47,6 +47,11 @@ class NotesViewModel @Inject constructor(
             is NoteEvent.DeleteNote -> {
                 viewModelScope.launch {
                     notesUseCases.deleteNote(event.note)
+                    _state.value = state.value.copy(
+                        notes = state.value.notes.filter {
+                            event.note.id != it.id
+                        }
+                    )
                     recentlyDeletedNote = event.note
                 }
             }
