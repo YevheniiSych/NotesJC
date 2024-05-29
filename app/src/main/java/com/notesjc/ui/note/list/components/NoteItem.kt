@@ -26,8 +26,8 @@ import com.notesjc.ui.theme.Teal200
 @Composable
 fun NoteItem(
     note: Note,
-    onNoteClick: () -> Unit,
-    onDeleteClick: () -> Unit
+    onNoteClick: (noteId: Int) -> Unit,
+    onDeleteClick: (note: Note) -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -37,7 +37,9 @@ fun NoteItem(
             .background(Teal200)
             .padding(horizontal = 20.dp, vertical = 10.dp)
             .clickable {
-                onNoteClick()
+                note.id?.let {
+                    onNoteClick(it)
+                }
             }
     ) {
         Row(
@@ -53,7 +55,7 @@ fun NoteItem(
                 overflow = TextOverflow.Ellipsis,
             )
             Icon(
-                modifier = Modifier.clickable { onDeleteClick() },
+                modifier = Modifier.clickable { onDeleteClick(note) },
                 imageVector = Icons.Filled.Delete,
                 contentDescription = "Delete icon",
             )

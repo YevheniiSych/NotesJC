@@ -59,7 +59,7 @@ class EditNoteViewModel @Inject constructor(
             }
 
             is EditNoteEvent.EnteredContent -> {
-                _noteContent.value = noteTitle.value.copy(
+                _noteContent.value = noteContent.value.copy(
                     text = event.value
                 )
             }
