@@ -1,6 +1,5 @@
 package com.notesjc.data.note.repository
 
-import android.provider.ContactsContract
 import com.notesjc.data.note.data_source.NoteDao
 import com.notesjc.data.note.model.Note
 import kotlinx.coroutines.flow.Flow
